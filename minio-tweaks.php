@@ -1,15 +1,13 @@
 <?php
 /*
-Plugin Name: WP Offload Media Tweaks
-Plugin URI: http://github.com/deliciousbrains/wp-amazon-s3-and-cloudfront-tweaks
+Plugin Name: WP Offload Media AMS
+Plugin URI: http://ams.com.kh/dev
 Description: Examples of using WP Offload Media's filters
-Author: Delicious Brains
-Version: 0.6.0
-Author URI: http://deliciousbrains.com
+Author: Chann Chetra
+Version: 0.6.1
+Author URI: http://ams.com.kh
 Network: True
 */
-
-// Copyright (c) 2015 Delicious Brains. All rights reserved.
 //
 // Released under the GPL license
 // http://www.opensource.org/licenses/gpl-license.php
@@ -74,13 +72,13 @@ class Amazon_S3_and_CloudFront_Tweaks {
 		 * Custom S3 API Example: MinIO
 		 * @see https://min.io/
 		 */
-		//add_filter( 'as3cf_aws_s3_client_args', array( $this, 'minio_s3_client_args' ) );
-		//add_filter( 'as3cf_aws_get_regions', array( $this, 'minio_get_regions' ) );
-		//add_filter( 'as3cf_aws_s3_url_domain', array( $this, 'minio_s3_url_domain' ), 10, 5 );
-		//add_filter( 'as3cf_upload_acl', array( $this, 'minio_upload_acl' ), 10, 1 );
-		//add_filter( 'as3cf_upload_acl_sizes', array( $this, 'minio_upload_acl' ), 10, 1 );
-		//add_filter( 'as3cf_aws_s3_console_url', array( $this, 'minio_s3_console_url' ) );
-		//add_filter( 'as3cf_aws_s3_console_url_prefix_param', array( $this, 'minio_s3_console_url_prefix_param' ) );
+		add_filter( 'as3cf_aws_s3_client_args', array( $this, 'minio_s3_client_args' ) );
+		add_filter( 'as3cf_aws_get_regions', array( $this, 'minio_get_regions' ) );
+		add_filter( 'as3cf_aws_s3_url_domain', array( $this, 'minio_s3_url_domain' ), 10, 5 );
+		add_filter( 'as3cf_upload_acl', array( $this, 'minio_upload_acl' ), 10, 1 );
+		add_filter( 'as3cf_upload_acl_sizes', array( $this, 'minio_upload_acl' ), 10, 1 );
+		add_filter( 'as3cf_aws_s3_console_url', array( $this, 'minio_s3_console_url' ) );
+		add_filter( 'as3cf_aws_s3_console_url_prefix_param', array( $this, 'minio_s3_console_url_prefix_param' ) );
 
 		/*
 		 * Custom S3 API Example: Wasabi
